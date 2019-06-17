@@ -1,0 +1,20 @@
+{
+  "name": "dummydata",
+  "version": "1.0.0",
+  "description": "Projet 2 -  Dummy Employee Data",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server -p 3000 ./public -c-1"
+  },
+  "keywords": [
+    "Full JavaScript",
+    "HTML 5",
+    "CSS 3",
+    "Fetch JS ..."
+  ],
+  "author": "Abousaid Salah-Eddine",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
