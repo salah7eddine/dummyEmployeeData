@@ -175,7 +175,7 @@ function deleteUser(id) {
 
 // Create User
 function createUser(user) {
-    fetch('http://dummy.restapiexample.com/api/v1/create/', {
+    fetch('http://dummy.restapiexample.com/api/v1/create', {
         credentials: 'same-origin',
         method: 'POST',
         body: JSON.stringify(user),
@@ -198,8 +198,6 @@ const ageInput = document.querySelector('#age');
 const salaryInput = document.querySelector('#salary');
 const msg = document.querySelector('.msg');
 
-
-
 // Add User 
 function onSumbit(e) {
     e.preventDefault();
@@ -211,11 +209,12 @@ function onSumbit(e) {
         setTimeout(() => msg.remove(), 3000);
     } else {
         const userForm = {
-            "employee_name": nameInput.value,
-            "employee_age": Number(ageInput.value),
-            "employee_salary": Number(salaryInput.value),
+            "name": nameInput.value,
+            "age": Number(ageInput.value),
+            "salary": Number(salaryInput.value),
         }
         createUser(userForm);
     }
 }
+
 myForm.addEventListener('submit', onSumbit);
