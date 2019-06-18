@@ -1,6 +1,5 @@
+// init url to have data
 const url = 'http://dummy.restapiexample.com/api/v1/employees';
-
-
 
 var dataUsers;
 var cloneDataUsers;
@@ -56,24 +55,25 @@ function showUsers(infoUsers) {
     document.getElementById('users').innerHTML = output;
 }
 
+// Get User
 function onGet(id) {
     getUser(id);
 }
 
+// Edit User
 function onEdit(id) {
     console.log(id);
-
 }
 
+// Delete User
 function onDelete(id) {
     let conf = confirm("Etes vous sùre ?");
     if (conf) {
         deleteUser(id);
-
     }
 }
 
-
+// show  pagination
 function paginationOfUsers() {
     let p = '';
 
@@ -89,7 +89,7 @@ function paginationOfUsers() {
     document.getElementById('pages').innerHTML = p;
 };
 
-
+// get data of page current
 const onPageUsers = i => {
     currentPage = i;
     fetchUsers();
@@ -120,7 +120,7 @@ const GetUserOrderByName = () => {
     showUsers(cloneDataUsers[currentPage]);
 }
 
-
+// method to sort data by Age
 const GetUserOrderByAge = () => {
 
     cloneDataUsers = Object.keys(dataUsers[currentPage]).map(i => dataUsers[i]);
@@ -129,6 +129,7 @@ const GetUserOrderByAge = () => {
     showUsers(cloneDataUsers[currentPage]);
 }
 
+// method to sort data by Salary
 const GetUserOrderBySalary = () => {
     cloneDataUsers = Object.keys(dataUsers[currentPage]).map(i => dataUsers[i]);
 
@@ -157,7 +158,7 @@ function chunkArray(arr, len) {
     return chunkedArr;
 }
 
-// Get User
+// Get User by ID
 function getUser(id) {
     fetch('http://dummy.restapiexample.com/api/v1/employee/' + id).then(resp => resp.json()).then(data => console.log(data));
 }
@@ -191,7 +192,6 @@ function createUser(user) {
 
 
 // page Add User
-
 const myForm = document.querySelector('#my-form');
 const nameInput = document.querySelector('#name');
 const ageInput = document.querySelector('#age');
@@ -200,7 +200,7 @@ const msg = document.querySelector('.msg');
 
 
 
-
+// Add User 
 function onSumbit(e) {
     e.preventDefault();
 

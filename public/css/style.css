@@ -62,7 +62,7 @@ img {
 table {
     margin-left: auto;
     margin-right: auto;
-    width: 10em
+    width: 70em
 }
 
 
@@ -94,7 +94,7 @@ table {
 #aff_user th {
     color: #000;
     /* border: 1px solid #ddd; */
-    padding: 8px;
+    padding: 18px;
 }
 
 #aff_user tr:nth-child(odd) {
@@ -106,8 +106,8 @@ table {
 }
 
 #aff_user th {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     text-align: left;
     background-color: blue;
     color: white;
